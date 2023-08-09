@@ -83,7 +83,7 @@ const displayMovements = function (movements) {
 
 displayMovements(account1.movements);
 
-console.log(containerMovements);
+// console.log(containerMovements);
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -196,3 +196,33 @@ currenciessUnique.forEach(function (value, _, set) {
   console.log(`${value}: ${value}`);
 });
 */
+
+// Coding Challenge #1
+
+// Test data 1)
+const dogsJulia = [3, 5, 2, 12, 7];
+const correctDogsJulia = dogsJulia.slice(1, 3);
+const dogsKate = [4, 1, 15, 8, 3];
+
+// Test data 2)
+
+// const dogsJulia = [9, 16, 6, 8, 3];
+// const correctDogsJulia = dogsJulia.slice(1, 3);
+// const dogsKate = [10, 5, 6, 1, 4];
+
+// console.log(correctDogsJulia, dogsKate, bothDogsArray);
+
+const checkDogs = function (arr1, arr2) {
+  const bothDogsArray = arr1.concat(arr2);
+  bothDogsArray.forEach(function (years, i) {
+    // const type = years >= 3 ? 'an adult ' : 'still a puppy';
+    // console.log(`Dog number ${i + 1} is ${type}, and is ${years} years old`);
+    if (years >= 3) {
+      console.log(`Dog number ${i + 1} is an adult, and is ${years} years old`);
+    } else {
+      console.log(`Dog number ${i + 1} is still a puppy 🐶`);
+    }
+  });
+};
+
+checkDogs(correctDogsJulia, dogsKate);
