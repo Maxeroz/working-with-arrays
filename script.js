@@ -195,7 +195,6 @@ console.log(currenciessUnique);
 currenciessUnique.forEach(function (value, _, set) {
   console.log(`${value}: ${value}`);
 });
-*/
 
 // Coding Challenge #1
 
@@ -226,3 +225,6 @@ const checkDogs = function (arr1, arr2) {
 };
 
 checkDogs(correctDogsJulia, dogsKate);
+*/
+
+// Data Transformations: map, filter, reduce
