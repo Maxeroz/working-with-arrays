@@ -83,6 +83,21 @@ const displayMovements = function (movements) {
 
 displayMovements(account1.movements);
 
+// Computing Usernames
+
+const createUsernames = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(word => word[0])
+      .join('');
+  });
+};
+
+createUsernames(accounts);
+
+console.log(accounts);
 // console.log(containerMovements);
 
 /////////////////////////////////////////////////
@@ -225,7 +240,6 @@ const checkDogs = function (arr1, arr2) {
 };
 
 checkDogs(correctDogsJulia, dogsKate);
-*/
 
 // Data Transformations: map, filter, reduce
 
@@ -261,3 +275,4 @@ const movementsDescriptions = movements.map(
 // });
 
 console.log(movementsDescriptions);
+*/
