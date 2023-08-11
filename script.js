@@ -323,7 +323,6 @@ let balanceFor = 0;
 for (const mov of movements) balanceFor += mov;
 
 console.log(balanceFor);
-*/
 
 // Maximum value
 
@@ -332,3 +331,21 @@ const maxValue = movements.reduce((acc, mov) => {
   else return mov;
 });
 console.log(maxValue);
+*/
+
+// Coding Challenge #2
+
+const calcAverageHumanAge = function (arr) {
+  const newArr = arr
+    .map(dogAge => {
+      if (dogAge <= 2) return 2 * dogAge;
+      else return 16 + dogAge * 4;
+    })
+    .filter(dogAge => dogAge >= 18);
+
+  // return newArr.reduce((acc, dogAge) => acc + dogAge, 0) / newArr.length;
+  return newArr.reduce((acc, dogAge, i, arr) => acc + dogAge / arr.length, 0);
+};
+
+console.log(calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]));
+console.log(calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]));
