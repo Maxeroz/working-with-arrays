@@ -615,7 +615,6 @@ console.log(movements);
 // });
 movements.sort((a, b) => b - a);
 console.log(movements);
-*/
 
 /////////////////////////////////////////////////
 // More Ways of Creating and Filling Arrays
@@ -656,3 +655,6 @@ labelBalance.addEventListener('click', function () {
   const movementsUI2 = [...document.querySelectorAll('.movements__value')];
   console.log(movementsUI2);
 });
+
+console.log({ length: 7 });
+*/
